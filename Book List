@@ -1,0 +1,12 @@
+/**Book List:
+All About Love by Bell Hooks
+Becoming by Michelle Obama
+You Got Anything Stronger by Gabrielle Union
+**/
+
+Create Table books(id INTEGER PRIMARY KEY, name TEXT, rating INTEGER);
+
+INSERT INTO books VALUES (1,"All About Love",4.5);
+INSERT INTO books VALUES (2,"Becoming",4.6);
+INSERT INTO books VALUES (3,"You Got Anything STRONGER?",4.1);
+SELECT*FROM books;
