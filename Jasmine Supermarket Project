@@ -1,0 +1,20 @@
+CREATE TABLE Jasmine_Supermarket (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, Price INTEGER, AISLE INTEGER);
+INSERT INTO Jasmine_Supermarket VALUES(1,"APPLES",50,1,1);
+INSERT INTO Jasmine_Supermarket Values(2,"Bananas",100,.20,1);
+INSERT INTO Jasmine_Supermarket Values(3,"Carrots",100,2,1);
+INSERT INTO Jasmine_Supermarket Values(4,"Soup",100,2,2);
+INSERT INTO Jasmine_Supermarket VaLues(5,"Spaghetti",100,3,2);
+INSERT INTO Jasmine_Supermarket VaLues(6,"Tomato Sauce",100,1,2);
+INSERT INTO Jasmine_Supermarket VaLues(7,"Cereal",150,4,3);
+INSERT INTO Jasmine_Supermarket VaLues(8,"Cake Mix",50,3,3);
+INSERT INTO Jasmine_Supermarket VaLues(9,"Sugar",75,3,3);
+INSERT INTO Jasmine_Supermarket VaLues(10,"Toliet Paper",50,5,4);
+INSERT INTO Jasmine_Supermarket VaLues(11,"Paper towel",50,5,4);
+INSERT INTO Jasmine_Supermarket VaLues(12,"Soap",75,2,4);
+INSERT INTO Jasmine_Supermarket VaLues(13,"Ground Beef",30,4,5);
+INSERT INTO Jasmine_Supermarket VaLues(14,"Salmon",25,7,5);
+INSERT INTO Jasmine_Supermarket VaLues(15,"Chicken Wings",35,7,5);
+
+SELECT*FROM Jasmine_Supermarket;
+SELECT*FROM Jasmine_supermarket Order BY price;
+Select price, sum(quantity) From JAsmine_supermarket Group BY Price;
