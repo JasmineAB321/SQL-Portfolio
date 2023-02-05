@@ -1,0 +1,81 @@
+/* Create table about the people and what they do here */
+Create table movie_stars (id INTEGER PRIMARY KEY, fullname TEXT, biggest_film TEXT, Spouse TEXT, Birthdate Text);
+
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Margot Robbie", "Suicide Squad", "Tom Ackerley", "1990-07-02");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Samuel L Jackson", "Avengers:Endgame", "LaTanya Richardson Jackson", "1948-12-21");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Viola Davis", "Suicide Squad", "Julius Tennon ", "1965-08-11");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Will Smith", "Suicide Squad", "Jada Pinkett-Smith ", "1968-09-25");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Robert Downey JR", "Avengers: Endgame", "Susan Downey", "1965-04-04");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Chris Evans", "Avengers: Endgame", "Null ", "1981-06-13");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Zoe Saldana", "Avatar", "Marco Perego Saldana ", "1978-06-19");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Florence Pugh", "Black Widow", "NULL ", "1996-01-03");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Chadwick Boseman", "Avengers: Endgame", "	Taylor Simone Ledward ", "1976-11-29");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Letitia Wright", "Avengers: Endgame", "NULL ", "1965-08-11");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Winston Duke", "Avengers: Endgame", "NULL ", "1986-11-15");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Michael B Jordan", "Black Panther", "Null", "1987-02-09");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Jordan Peele", "Toy Story 4", "Chelsea Peretti ", "1979-02-21");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("Daniel Kaluuya", "Black Panther", "NULL ", "1989-02-24");
+INSERT into movie_stars (fullname, biggest_film, Spouse, Birthdate) 
+Values ("KeKe Palmer", "Ice Age: Continental Drift", "Null", "1993-08-26");
+
+Create table birth_place (id INTEGER PRIMARY KEY, star_id INTEGER, continent TEXT, country TEXT, state TEXT);
+
+Insert INTO birth_place (star_id,continent,country, state)
+Values (1,"Australia", "Queensland", "Darby");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (2,"North America", "USA", "Washington, DC");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (3,"North America", "USA", "Washington, South Carolina");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (4,"Noth America", "USA", "Pennsylvannia");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (5,"North America", "USA", "New York");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (6,"North America", "USA", "Massachusetts");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (7,"North America", "USA", "New Jersey");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (8,"Europe", "United Kingdom", "Oxford");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (9,"North America", "USA", "South Carolina");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (10,"South America", "Guyana", "Georgetown");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (11,"South America", "Trinidad and Tobago", "Saint Paul");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (12,"North America", "USA", "California");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (13,"North America", "USA", "New York");
+Insert INTO birth_place (star_id,continent,country, state)
+Values (14,"Europe", "United Kingdom", "London");
+Insert INTO birth_place(star_id,continent,country, state)
+Values (15,"North America", "USA", "Illinois");
+
+select movie_stars.fullname, movie_stars.birthdate, birth_place.country
+From movie_Stars
+Left Outer join birth_place
+on Movie_stars.id=birth_place.star_id;
+
+Select movie_stars.fullname,movie_stars.biggest_film,birth_place.state
+From movie_stars
+Left Outer Join birth_place
+on movie_stars.id=birth_place.star_id;
+
+SELECT movie_stars.fullname as "Movie Star", Movie_stars.spouse as "Spouse"
+    FROM movie_stars
+    left outer JOIN movie_Stars spouses
+    ON movie_Stars.spouse=spouses.id;
