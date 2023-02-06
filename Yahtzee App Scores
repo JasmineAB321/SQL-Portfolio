@@ -1,0 +1,27 @@
+/* What does the app's SQL look like? */
+Create table yahtzee (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    date TEXT,
+    score INTEGER);
+    
+INSERT INTO yahtzee (user_id,date,score)
+Values ("jazz", "2022-05-01", 565);
+INSERT INTO yahtzee (user_id,date,score)
+Values ("jazz", "2022-04-22", 730);
+INSERT INTO yahtzee (user_id,date,score)
+Values ("star5", "2022-04-15", 1000);
+INSERT INTO yahtzee (user_id,date,score)
+Values ("jazz", "2022-04-15", 1255);
+INSERT INTO yahtzee (user_id,date,score)
+Values ("jbrown", "2022-04-05", 227);
+
+Select * From yahtzee;
+
+Update yahtzee set user_id = "love214" where id=2;
+
+Select * From yahtzee;
+
+Delete From yahtzee where id=5;
+
+Select * From yahtzee;
